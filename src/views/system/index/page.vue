@@ -1,6 +1,6 @@
 <template>
 <div>
-  <el-button @click="handleAdd">新增</el-button>
+  <el-button @click="handleAdd" type="primary">新增</el-button>
   <el-table
     :data="tableData"
     style="width: 100%">

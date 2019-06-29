@@ -49,7 +49,7 @@
                     <i slot="prepend" class="fa fa-keyboard-o"></i>
                   </el-input>
                 </el-form-item>
-                <el-form-item prop="code">
+                <!-- <el-form-item prop="code">
                   <el-input
                     type="text"
                     v-model="formLogin.code"
@@ -58,7 +58,7 @@
                       <img class="login-code" src="./image/login-code.png">
                     </template>
                   </el-input>
-                </el-form-item>
+                </el-form-item> -->
                 <el-button
                   size="default"
                   @click="submit"
@@ -231,7 +231,8 @@ export default {
           })
             .then(() => {
               // 重定向对象不存在则返回顶层路径
-              this.$router.replace(this.$route.query.redirect || '/')
+              this.$router.push({ path: '/index' })
+              // this.$router.replace(this.$route.query.redirect || '/')
             })
         } else {
           // 登录表单校验失败

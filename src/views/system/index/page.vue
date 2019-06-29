@@ -1,5 +1,7 @@
 <template>
 <div>
+  <div>
+  <h3>实现对用户的增删改查:</h3>
   <el-button @click="handleAdd" type="primary">新增</el-button>
   <el-table
     :data="tableData"
@@ -53,6 +55,12 @@
   </span>
     </el-dialog>
   </div>
+  <div>
+    <h3>静态资源服务：</h3>
+    <el-button @click="openCssFile">访问css文件</el-button>
+    <el-button @click="openImgFile">访问img文件</el-button>
+  </div>
+  </div>
 </template>
 
 <script>
@@ -71,9 +79,14 @@ export default {
     this.getUser()
   },
   mounted () {
-    this.getUser()
   },
   methods: {
+    openCssFile () {
+      window.open('http://localhost:3000/css/basic.css')
+    },
+    openImgFile () {
+      window.open('http://localhost:3000/images/a.png')
+    },
     getUser () {
       userServer.getUser().then(res => {
         this.tableData = res.result

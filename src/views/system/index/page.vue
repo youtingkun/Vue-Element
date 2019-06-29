@@ -82,10 +82,10 @@ export default {
   },
   methods: {
     openCssFile () {
-      window.open('http://localhost:3000/css/basic.css')
+      window.open('http://www.thousandtree.cn:3000/css/basic.css')
     },
     openImgFile () {
-      window.open('http://localhost:3000/images/a.png')
+      window.open('http://www.thousandtree.cn:3000/images/a.png')
     },
     getUser () {
       userServer.getUser().then(res => {
